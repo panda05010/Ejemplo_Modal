@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="modal.css">
+    <title>Mostrar Formulario</title>
+    <style>
+        /* Estilo para ocultar la ventana por defecto */
+        #ventana {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            z-index: 9999;
+        }
+
+        /* Estilo para el fondo oscuro */
+        #fondoOscuro {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        /* Estilo para el botón "Cargar Archivo" */
+        #cargarArchivo {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+         /* Estilo para el botón "Cargar Archivo" */
+         #enviar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+
+        /* Estilo para el botón "Cargar Archivo" al pasar el cursor sobre él */
+        #cargarArchivo:hover {
+            background-color: #45a049;
+        }
+
+        #enviar:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="mostrarFormulario">Mostrar Formulario</button>
+
+    <div id="fondoOscuro"></div>
+
+    <div id="ventana">
+        <h2>Este es el formulario</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="archivo">Seleccionar archivo:</label>
+            <input type="file" id="archivo" name="archivo"><br><br>
+            <input type="submit" value="Enviar" id="enviar" onclick="Saludo()">
+            <button id="cargarArchivo" onclick="carga()">Cargar Archivo</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript para mostrar la ventana al hacer clic en el botón
+        document.getElementById('mostrarFormulario').addEventListener('click', function() {
+            document.getElementById('ventana').style.display = 'block';
+            document.getElementById('fondoOscuro').style.display = 'block';
+        });
+
+        // JavaScript para ocultar la ventana al hacer clic en el botón "Cargar Archivo"
+        document.getElementById('cargarArchivo').addEventListener('click', function() {
+            document.getElementById('ventana').style.display = 'none';
+            document.getElementById('fondoOscuro').style.display = 'none';
+        });
+
+        function Saludo() {
+
+            for(let i = 0; i <=10000; i++){
+                alert("Hola Prostituta")
+            }
+        }
+
+        function carga() {
+            alert("pilas ya quedo"); 
+        }
+    </script>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

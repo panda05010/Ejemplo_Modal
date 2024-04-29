@@ -1,0 +1,18 @@
+/* Estilo para ocultar el formulario por defecto */
+#formulario {
+    display: none;
+}
+
+/* Estilo para centrar el formulario */
+#contenedorFormulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body{
+    background: url(https://www.xtrafondos.com/wallpapers/cubos-3d-neon-3313.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
